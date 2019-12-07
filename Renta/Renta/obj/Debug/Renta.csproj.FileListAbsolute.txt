@@ -1,0 +1,6 @@
+C:\Users\Toshiba\Documents\Visual Studio 2015\Projects\Renta\Renta\bin\Renta.dll.config
+C:\Users\Toshiba\Documents\Visual Studio 2015\Projects\Renta\Renta\bin\Renta.dll
+C:\Users\Toshiba\Documents\Visual Studio 2015\Projects\Renta\Renta\bin\Renta.pdb
+C:\Users\Toshiba\Documents\Visual Studio 2015\Projects\Renta\Renta\obj\Debug\Renta.csprojResolveAssemblyReference.cache
+C:\Users\Toshiba\Documents\Visual Studio 2015\Projects\Renta\Renta\obj\Debug\Renta.dll
+C:\Users\Toshiba\Documents\Visual Studio 2015\Projects\Renta\Renta\obj\Debug\Renta.pdb
