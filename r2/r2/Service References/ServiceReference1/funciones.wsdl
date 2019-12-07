@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="funciones" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xs:element name="guardar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="a" type="xs:int" />
+            <xs:element minOccurs="0" name="b" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="c" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="d" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="e" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="f" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="guardarResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modificar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="a" type="xs:int" />
+            <xs:element minOccurs="0" name="b" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="c" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="d" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="e" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="f" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="modificarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="modificarResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="eliminar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="a" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="eliminarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="eliminarResult" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="buscar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="cla" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="buscarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="buscarResult" nillable="true" type="q1:ArrayOfstring" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfstring">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Ifunciones_guardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:guardar" />
+  </wsdl:message>
+  <wsdl:message name="Ifunciones_guardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:guardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifunciones_modificar_InputMessage">
+    <wsdl:part name="parameters" element="tns:modificar" />
+  </wsdl:message>
+  <wsdl:message name="Ifunciones_modificar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modificarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifunciones_eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminar" />
+  </wsdl:message>
+  <wsdl:message name="Ifunciones_eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifunciones_buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:buscar" />
+  </wsdl:message>
+  <wsdl:message name="Ifunciones_buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:buscarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Ifunciones">
+    <wsdl:operation name="guardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifunciones/guardar" message="tns:Ifunciones_guardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifunciones/guardarResponse" message="tns:Ifunciones_guardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modificar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifunciones/modificar" message="tns:Ifunciones_modificar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifunciones/modificarResponse" message="tns:Ifunciones_modificar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifunciones/eliminar" message="tns:Ifunciones_eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifunciones/eliminarResponse" message="tns:Ifunciones_eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifunciones/buscar" message="tns:Ifunciones_buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifunciones/buscarResponse" message="tns:Ifunciones_buscar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Ifunciones" type="tns:Ifunciones">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="guardar">
+      <soap:operation soapAction="http://tempuri.org/Ifunciones/guardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificar">
+      <soap:operation soapAction="http://tempuri.org/Ifunciones/modificar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar">
+      <soap:operation soapAction="http://tempuri.org/Ifunciones/eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar">
+      <soap:operation soapAction="http://tempuri.org/Ifunciones/buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="funciones">
+    <wsdl:port name="BasicHttpBinding_Ifunciones" binding="tns:BasicHttpBinding_Ifunciones">
+      <soap:address location="http://localhost:3480/funciones.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
